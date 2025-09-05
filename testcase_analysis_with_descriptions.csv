@@ -1,0 +1,51 @@
+編號,功能,測項名稱,描述,Result,是否可跑
+1,VLAN,VlanSsidForwardTest,Verify that the DUT can forward the frame according to the vlan table by ssid.,Pass,✓ 可跑
+2,VLAN,VlanSsidVlanModeTest,Verify the DUT receive tagged and untagged frames based on vlan mode by ssid.,Pass,✓ 可跑
+3,VLAN,VlanSsidPvidSettingTest,Verify the DUT can forward untagged packets to correct VLANs based on the PVID setting by ssid.,Pass,✓ 可跑
+4,VLAN,VlanSsidTagUntagTest,Verify the DUT can forward untagged and tagged frames based on the untagged and tagged member by ssid.,Pass,✓ 可跑
+5,VLAN,VlanMgmtVlanTest,Check MVID setting can work properly.,skip,✗ 不可跑
+6,VLAN,VlanBoundaryTest,To verify the boundary conditions for VLAN ID range(1-4094),Pass,✓ 可跑
+7,VLAN,VlanLanPvidSettingTest,Verify the DUT can forward untagged packets to correct VLANs based on the PVID setting by lan.,Pass,✓ 可跑
+8,VLAN,VlanLanVlanModeTest,Verify the DUT receive tagged and untagged frames based on vlan mode by lan.,Pass,✓ 可跑
+9,VLAN,VlanLanForwardTest,Verify that the DUT can forward the frame according to the vlan table by lan.,Pass,✓ 可跑
+10,VLAN,VlanLanTagUntagTest,Verify the DUT can forward untagged and tagged frames based on the untagged and tagged member by lan.,Pass,✓ 可跑
+11,VLAN,VlanLanPriorityTagTest,Verify that the DUT can work well for VLAN classification as it receives a priority tagged frame by lan.,Pass,✓ 可跑
+12,VLAN,VlanLanMaxVlanEntriesTest,Verify the DUT maximum vlan entries rules.,skip,✗ 不可跑
+13,LLDP,lldpDefaultSettingTest,To verify the default configuration of LLDP in CLI.,Pass,✓ 可跑
+14,LLDP,lldpBoundaryTransmissionIntervalTest,To verify the boundary conditions for LLDP Transmission Interval,Pass,✓ 可跑
+15,LLDP,lldpNeighborUpdateTest,To verify that LLDP neighbors details update in show command,Pass,✓ 可跑
+16,LLDP,lldpPduFormatTest,To verify that LLDP PDUs format is correct and contains Mandatory TLVs + Optional TLVs with values,Pass,✓ 可跑
+17,LLDP,lldpNeighborSysNameChangeTest,To verify that show lldp neighbor/optional TLV displays user-configured System Name/Device Name value,Pass,✓ 可跑
+18,LLDP,lldpNeighborPortDescriptionChangeTest,To verify that show lldp neighbor/Mandatory TLV displays Port Description value,Pass,✓ 可跑
+19,LLDP,lldpNeighborRemoveTest,To verify whether offline link partner is removed from LLDP table,Pass,✓ 可跑
+20,LLDP,lldpNeighborSysCapabilityTest,To verify that show lldp neighbor/optional TLV doesn't show System Capability value,Pass,✓ 可跑
+21,LLDP,lldpDisableEnableTest,To verify that LLDP neighbor details are removed when LLDP disabled and recover when LLDP enabled,Pass,✓ 可跑
+22,LLDP,lldpVlanTest,To verify that LLDP functionality on non-default VLAN,Pass,✓ 可跑
+23,LLDP,lldpPortShutdownTest,To verify that DUT transmits LLDP PDUs with TTL TLV value as Zero(0) when port is shutdown,Pass,✓ 可跑
+24,LLDP,lldpNeighborDisplayTest,To verify that LLDP neighbors details display in show command,Pass,✓ 可跑
+25,LLDP,lldpNeighborMultiClientDisplayTest,To verify that show lldp neighbor shows more than one neighbor details correctly,Pass,✓ 可跑
+26,MTU,MTUDefaultValueLANTest.py,MTU size - Default - check function work properly - LAN,Pass,✓ 可跑
+27,MTU,MTUDefaultValueWLANTest.py,MTU size - Default - check function work properly -WLAN,Pass,✓ 可跑
+28,MTU,MTUMaxValueLANTest.py,MTU size - Max - check function work properly - LAN,skip,✗ 不可跑
+29,MTU,MTUMaxValueWLANTest.py,MTU size - Max - check function work properly - WLAN,skip,✗ 不可跑
+30,MTU,MTUMinValueLANTest.py,MTU size - Min - check function work properly - LAN,Pass,✓ 可跑
+31,MTU,MTUMinValueWLANTest.py,MTU size - Min - check function work properly - WLAN,Pass,✓ 可跑
+32,Qos,Qos68bytes,ToS tagged check with packet length 68 bytes,skip,✗ 不可跑
+33,Qos,QosSpCos,To verify Cos tagged with SP mode on AP mode,skip,✗ 不可跑
+34,Qos,QosSpCosClient,To verify Cos tagged with SP mode on Client mode,skip,✗ 不可跑
+35,Qos,QosSpCosClientMCS5-NSS2,To verify Cos tagged with SP mode on Client mode and Rate MCS5-NSS2,skip,✗ 不可跑
+36,Qos,QosSpCosMCS5-NSS2,To verify Cos tagged with SP mode on AP mode and Rate MCS5-NSS2,skip,✗ 不可跑
+37,Qos,QosSpDscp,To verify Tos tagged with SP mode on AP mode,Pass,✓ 可跑
+38,Qos,QosSpDscpClient,To verify Tos tagged with SP mode on Client mode,Pass,✓ 可跑
+39,Qos,QosSpDscpClientMCS5-NSS2,To verify Tos tagged with SP mode on Client mode and Rate MCS5-NSS2,Fail,✓ 可跑
+40,Qos,QosSpDscpMCS5-NSS2,To verify Tos tagged with SP mode on AP mode and Rate MCS5-NSS2,skip,✗ 不可跑
+41,Qos,QosVlanId0,To verify Cos tagged with SP mode and Vlan ID is 0,skip,✗ 不可跑
+42,FirewallLayer2,FirewallLayer2AcceptTest,To verify Rule is accept and Global is drop on AP,Pass,✓ 可跑
+43,FirewallLayer2,FirewallLayer2ClientAdvanceTest,To verify the configuration of L2 policy for DUT2 in client mode,Pass,✓ 可跑
+44,FirewallLayer2,FirewallLayer2ClientDropTest,To verify Rule is drop and Global is accept on Client,Pass,✓ 可跑
+45,FirewallLayer2,FirewallLayer2ClientTest,To verify Rule (accept) setting on Client and AP input packets forward correctly,Pass,✓ 可跑
+46,FirewallLayer2,FirewallLayer2DefaultTest,To verify Firewall Default setting,Pass,✓ 可跑
+47,FirewallLayer2,FirewallLayer2DropTest,To verify Rule is drop and Global is accept on AP,Pass,✓ 可跑
+48,FirewallLayer2,FirewallLayer2ExportImportTest,To verify Rule Export and Import correct,Pass,✓ 可跑
+49,FirewallLayer2,FirewallLayer2GlobalAcceptTest,To verify Global is accept on AP,Pass,✓ 可跑
+50,FirewallLayer2,FirewallLayer2GlobalAttentionAcceptTest,If the default action is set to Accept and all rules are disabled all packets will be denied,Pass,✓ 可跑
