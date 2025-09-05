@@ -1,0 +1,204 @@
+編號,功能,測項名稱,描述,Result,是否可跑
+1,VLAN,VlanSsidForwardTest,Verify that the DUT can forward the frame according to the vlan table by ssid.,Pass,✓ 可跑
+2,VLAN,VlanSsidVlanModeTest,Verify the DUT receive tagged and untagged frames based on vlan mode by ssid.,Pass,✓ 可跑
+3,VLAN,VlanSsidPvidSettingTest,Verify the DUT can forward untagged packets to correct VLANs based on the PVID setting by ssid.,Pass,✓ 可跑
+4,VLAN,VlanSsidTagUntagTest,Verify the DUT can forward untagged and tagged frames based on the untagged and tagged member by ssid.,Pass,✓ 可跑
+5,VLAN,VlanMgmtVlanTest,Check MVID setting can work properly.,skip,✗ 不可跑
+6,VLAN,VlanBoundaryTest,To verify the boundary conditions for VLAN ID range(1-4094),Pass,✓ 可跑
+7,VLAN,VlanLanPvidSettingTest,Verify the DUT can forward untagged packets to correct VLANs based on the PVID setting by lan.,Pass,✓ 可跑
+8,VLAN,VlanLanVlanModeTest,Verify the DUT receive tagged and untagged frames based on vlan mode by lan.,Pass,✓ 可跑
+9,VLAN,VlanLanForwardTest,Verify that the DUT can forward the frame according to the vlan table by lan.,Pass,✓ 可跑
+10,VLAN,VlanLanTagUntagTest,Verify the DUT can forward untagged and tagged frames based on the untagged and tagged member by lan.,Pass,✓ 可跑
+11,VLAN,VlanLanPriorityTagTest,Verify that the DUT can work well for VLAN classification as it receives a priority tagged frame by lan.,Pass,✓ 可跑
+12,VLAN,VlanLanMaxVlanEntriesTest,Verify the DUT maximum vlan entries rules.,skip,✗ 不可跑
+13,LLDP,lldpDefaultSettingTest,To verify the default configuration of LLDP in CLI.,Pass,✓ 可跑
+14,LLDP,lldpBoundaryTransmissionIntervalTest,To verify the boundary conditions for LLDP Transmission Interval,Pass,✓ 可跑
+15,LLDP,lldpNeighborUpdateTest,To verify that LLDP neighbors details update in show command,Pass,✓ 可跑
+16,LLDP,lldpPduFormatTest,To verify that LLDP PDUs format is correct and contains Mandatory TLVs + Optional TLVs with values,Pass,✓ 可跑
+17,LLDP,lldpNeighborSysNameChangeTest,To verify that show lldp neighbor/optional TLV displays user-configured System Name/Device Name value,Pass,✓ 可跑
+18,LLDP,lldpNeighborPortDescriptionChangeTest,To verify that show lldp neighbor/Mandatory TLV displays Port Description value,Pass,✓ 可跑
+19,LLDP,lldpNeighborRemoveTest,To verify whether offline link partner is removed from LLDP table,Pass,✓ 可跑
+20,LLDP,lldpNeighborSysCapabilityTest,To verify that show lldp neighbor/optional TLV doesn't show System Capability value,Pass,✓ 可跑
+21,LLDP,lldpDisableEnableTest,To verify that LLDP neighbor details are removed when LLDP disabled and recover when LLDP enabled,Pass,✓ 可跑
+22,LLDP,lldpVlanTest,To verify that LLDP functionality on non-default VLAN,Pass,✓ 可跑
+23,LLDP,lldpPortShutdownTest,To verify that DUT transmits LLDP PDUs with TTL TLV value as Zero(0) when port is shutdown,Pass,✓ 可跑
+24,LLDP,lldpNeighborDisplayTest,To verify that LLDP neighbors details display in show command,Pass,✓ 可跑
+25,LLDP,lldpNeighborMultiClientDisplayTest,To verify that show lldp neighbor shows more than one neighbor details correctly,Pass,✓ 可跑
+26,MTU,MTUDefaultValueLANTest.py,MTU size - Default - check function work properly - LAN,Pass,✓ 可跑
+27,MTU,MTUDefaultValueWLANTest.py,MTU size - Default - check function work properly - WLAN,Pass,✓ 可跑
+28,MTU,MTUMaxValueLANTest.py,MTU size - Max - check function work properly - LAN,skip,✗ 不可跑
+29,MTU,MTUMaxValueWLANTest.py,MTU size - Max - check function work properly - WLAN,skip,✗ 不可跑
+30,MTU,MTUMinValueLANTest.py,MTU size - Min - check function work properly - LAN,Pass,✓ 可跑
+31,MTU,MTUMinValueWLANTest.py,MTU size - Min - check function work properly - WLAN,Pass,✓ 可跑
+32,Qos,Qos68bytes,ToS tagged check with packet length 68 bytes,skip,✗ 不可跑
+33,Qos,QosSpCos,To verify Cos tagged with SP mode on AP mode,skip,✗ 不可跑
+34,Qos,QosSpCosClient,To verify Cos tagged with SP mode on Client mode,skip,✗ 不可跑
+35,Qos,QosSpCosClientMCS5-NSS2,To verify Cos tagged with SP mode on Client mode and Rate MCS5-NSS2,skip,✗ 不可跑
+36,Qos,QosSpCosMCS5-NSS2,To verify Cos tagged with SP mode on AP mode and Rate MCS5-NSS2,skip,✗ 不可跑
+37,Qos,QosSpDscp,To verify Tos tagged with SP mode on AP mode,Pass,✓ 可跑
+38,Qos,QosSpDscpClient,To verify Tos tagged with SP mode on Client mode,Pass,✓ 可跑
+39,Qos,QosSpDscpClientMCS5-NSS2,To verify Tos tagged with SP mode on Client mode and Rate MCS5-NSS2,Fail,✓ 可跑
+40,Qos,QosSpDscpMCS5-NSS2,To verify Tos tagged with SP mode on AP mode and Rate MCS5-NSS2,skip,✗ 不可跑
+41,Qos,QosVlanId0,To verify Cos tagged with SP mode and Vlan ID is 0,skip,✗ 不可跑
+42,FirewallLayer2,FirewallLayer2AcceptTest,To verify Rule is accept and Global is drop on AP,Pass,✓ 可跑
+43,FirewallLayer2,FirewallLayer2ClientAdvanceTest,To verify the configuration of L2 policy for DUT2 in client mode,Pass,✓ 可跑
+44,FirewallLayer2,FirewallLayer2ClientDropTest,To verify Rule is drop and Global is accept on Client,Pass,✓ 可跑
+45,FirewallLayer2,FirewallLayer2ClientTest,To verify Rule (accept) setting on Client and AP input packets forward correctly,Pass,✓ 可跑
+46,FirewallLayer2,FirewallLayer2DefaultTest,To verify Firewall Default setting,Pass,✓ 可跑
+47,FirewallLayer2,FirewallLayer2DropTest,To verify Rule is drop and Global is accept on AP,Pass,✓ 可跑
+48,FirewallLayer2,FirewallLayer2ExportImportTest,To verify Rule Export and Import correct,Pass,✓ 可跑
+49,FirewallLayer2,FirewallLayer2GlobalAcceptTest,To verify Global is accept on AP,Pass,✓ 可跑
+50,FirewallLayer2,FirewallLayer2GlobalAttentionAcceptTest,If the default action is set to Accept and all rules are disabled all packets will be denied,Pass,✓ 可跑
+51,FirewallLayer2,FirewallLayer2GlobalAttentionDropTest,If the default action is set to Drop and all rules are disabled all packets will be allowed,Pass,✓ 可跑
+52,FirewallLayer2,FirewallLayer2GlobalDropTest,To verify Global is drop on AP,Pass,✓ 可跑
+53,FirewallLayer2,FirewallLayer2PriorityBoundaryTest,To verify Rule priority Boundary and error message,Pass,✓ 可跑
+54,FirewallLayer2,FirewallLayer2PriorityCommandNewTest,To verify command new,Pass,✓ 可跑
+55,FirewallLayer2,FirewallLayer2PriorityMaxTest,To verify setting PriorityMax,Pass,✓ 可跑
+56,FirewallLayer2,FirewallLayer2PriorityNotSequenceTest,To verify Priority Not Sequence setting,Pass,✓ 可跑
+57,FirewallLayer2,FirewallLayer2PriorityTest,To verify Priority,Pass,✓ 可跑
+58,FirewallLayer2,FirewallLayer2SamePriorityTest,To verify same Priority,Pass,✓ 可跑
+59,FirewallLayer2,FirewallLayer2ReloadTest,To verify after reload DUT behavior,Pass,✓ 可跑
+60,FirewallLayer2,FirewallLayer2SaAnyTest,To verify Sa is any,Pass,✓ 可跑
+61,FirewallLayer2,FirewallLayer2DaAnyTest,To verify Da is any,Pass,✓ 可跑
+62,FirewallLayer2,FirewallLayer2WithoutActionTest,To verify not setting Action,Pass,✓ 可跑
+63,FirewallLayer3,FirewallLayer3ApAcceptTest,To verify Rule is accept and Global is drop on AP,Pass,✓ 可跑
+64,FirewallLayer3,FirewallLayer3ApDropTest,To verify Rule is drop and Global is accept on AP,Pass,✓ 可跑
+65,FirewallLayer3,FirewallLayer3ClientAcceptTest,To verify Rule is accept and Global is drop on Client,Pass,✓ 可跑
+66,FirewallLayer3,FirewallLayer3ClientDropTest,To verify Rule is drop and Global is accept on Client,Pass,✓ 可跑
+67,FirewallLayer3,FirewallLayer3DefaultTest,To verify Firewall Default setting,Pass,✓ 可跑
+68,FirewallLayer3,FirewallLayer3DipAnyTest.py,To verify Dip is any,Pass,✓ 可跑
+69,FirewallLayer3,FirewallLayer3GlobalAttentionAcceptTest,If the default action is set to Accept and all rules are disabled all packets will be denied,Pass,✓ 可跑
+70,FirewallLayer3,FirewallLayer3GlobalAttentionDropTest,If the default action is set to Drop and all rules are disabled all packets will be allowed,Pass,✓ 可跑
+71,FirewallLayer3,FirewallLayer3ICMPTest,To verify Protocol ICMP Rule,Pass,✓ 可跑
+72,FirewallLayer3,FirewallLayer3NetmaskTest,To verify all Netmask can be setting,Pass,✓ 可跑
+73,FirewallLayer3,FirewallLayer3PriorityBoundaryTest,To verify Rule priority Boundary and error message,Pass,✓ 可跑
+74,FirewallLayer3,FirewallLayer3PriorityMaxTest,To verify setting Priority Max,Pass,✓ 可跑
+75,FirewallLayer3,FirewallLayer3PriorityNotSequenceTest.py,To verify Priority Not Sequence setting,Pass,✓ 可跑
+76,FirewallLayer3,FirewallLayer3ProtocolMixOnClientRouterModeTest,To verify Protocol Mix On Client Router Mode,Pass,✓ 可跑
+77,FirewallLayer3,FirewallLayer3ProtocolMixTest,To verify Protocol Mix,Pass,✓ 可跑
+78,FirewallLayer3,FirewallLayer3SamePriorityTest,To verify Priority Not Sequence setting,Pass,✓ 可跑
+79,FirewallLayer3,FirewallLayer3SipAnyTest,To verify Sip is any,Pass,✓ 可跑
+80,FirewallLayer3,FirewallLayer3TcpPortBoundaryTest,To verify Tcp Port Boundary and error message,Pass,✓ 可跑
+81,FirewallLayer3,FirewallLayer3TcpTest,To verify Protocol Tcp Rule,Pass,✓ 可跑
+82,FirewallLayer3,FirewallLayer3UdpPortBoundaryTest,To verify Udp Port Boundary and error message,Pass,✓ 可跑
+83,FirewallLayer3,FirewallLayer3UdpTest,To verify Protocol Udp Rule,Pass,✓ 可跑
+84,FirewallLayer3,FirewallLayer3WithoutActionTes,To verify not setting Action,Pass,✓ 可跑
+85,BasicFunction,UserAccountLimitationNameTest,To verify User Account Limitation Name,Pass,✓ 可跑
+86,BasicFunction,SystemTimeManualSettingTest,To verify that DUT allows to set date manually when the values are in range,Pass,✓ 可跑
+87,BasicFunction,SystemTimeZoneBoundaryValueTest,To set the time zone as boundary value,Pass,✓ 可跑
+88,BasicFunction,SystemTimeZoneAllPossibleValueAndBehaviorTest,To set the all time zone locally,Pass,✓ 可跑
+89,InitialSetup,InitSetupCountryErrorMessageTest,To test error message,Pass,✓ 可跑
+90,InitialSetup,InitSetupCountryTest,To make sure every country can setting correct,Pass,✓ 可跑
+91,InitialSetup,InitSetupMaxLengthTest,To test account password email max length,Pass,✓ 可跑
+92,UpgradeFirmware,upgradeFirmwareBySftpTest,use SFTP to upgrade FW,Pass,✓ 可跑
+93,UpgradeFirmware,upgradeFirmwareTest,use TFTP to upgrade FW,Fail,✓ 可跑
+94,UpgradeFirmware,uploadFirmwareBySftpTest,use SFTP to upload FW,Pass,✓ 可跑
+95,UpgradeFirmware,uploadFirmwareTest,use TFTP to upload FW,Pass,✓ 可跑
+96,DataCollection,DataCollectionBySftp.py,Use sftp To test DataCollection,Pass,✓ 可跑
+97,DataCollection,DataCollectionByTftp.py,Use tftp To test DataCollection,Pass,✓ 可跑
+98,DataCollection,DataCollectionIntervalTest.py,To test DataCollection interval,Pass,✓ 可跑
+99,DataCollection,DataCollectionStopByTftp.py,To test DataCollection stop button,Pass,✓ 可跑
+100,DataCollection,OneKeyInfoBySftp.py,Use sftp To test OneKeyInfo,Pass,✓ 可跑
+101,DataCollection,OneKeyInfoBySftpNoSignature.py,Use sftp To test OneKeyInfo without Signature,Pass,✓ 可跑
+102,DataCollection,OneKeyInfoByTftp.py,Use tftp To test OneKeyInfo,Pass,✓ 可跑
+103,DataCollection,OneKeyInfoByTftpNoSignature.py,Use tftp To test OneKeyInfo without Signature,Pass,✓ 可跑
+104,IpConfig,DhcpClientOptionTest.py,Check DHCP packet Option information,Pass,✓ 可跑
+105,IpConfig,DhcpClientSettingWithoutDhcpServer.py,To test when DUT can not get ip action,Pass,✓ 可跑
+106,IpConfig,DhcpClientTest.py,To make sure open DHCP client DUT can get ip export/import/warm start,Pass,✓ 可跑
+107,IpConfig,DhcpLeaseTimeTest.py,To Test DUT renew T1 is work,Fail,✓ 可跑
+108,IpConfig,DhcpReblindingTimeTest.py,To Test DUT reblinding T2 is work,Fail,✓ 可跑
+109,IpConfig,DhcpRecoverTest.py,To test if DHCP server timeout DUT action,Pass,✓ 可跑
+110,IpConfig,StaticIpGatewayTest.py,Test Static IP Gateway is work,Fail,✓ 可跑
+111,IpConfig,StaticIpSettingTest.py,Test Static IP is work and export/import/warm start,Pass,✓ 可跑
+112,IpConfig,StaticIpSubnetMaskTest.py,Test Static IP mask is work,Pass,✓ 可跑
+113,IpConfig,DhcpClientOptionOnCrModeTest.py,Wan can use DHCP to get ip,Pass,✓ 可跑
+114,IpConfig,DhcpClientRouterWanTest.py,To test Wan DHCP packet option,Pass,✓ 可跑
+115,NAT,Nat1To1EnableTest,To verify that 1-to-1 NAT entries could be enabled and disabled in configure mode,Pass,✓ 可跑
+116,NAT,NatDefaultConfigTest,To verify the default configuration of NAT in CLI,Pass,✓ 可跑
+117,NAT,Nat1To1NameDescriptionTest,To verify that NAT entries are configured with Name and description in CLI,Pass,✓ 可跑
+118,NAT,Nat1To1EndCommandTest,To verify that abort and end command in each configure layer,Pass,✓ 可跑
+119,NAT,Nat1To1SettingTest,To verify NAT entries are configured as 1-to-1 mode in CLI,Pass,✓ 可跑
+120,NAT,Nat1To1ChangePriorityTest,To verify that DUT allows to change newly created NAT entry priority value,Pass,✓ 可跑
+121,NAT,NatMaxEntriesTest,To verify that DUT allows to create max 32 entries & throws valid error message in CLI if it exceeds,Pass,✓ 可跑
+122,NAT,Nat1To1SettingFailTest,To verify that DUT throws error message for 1-to-1 NAT settings configured without parameters,Pass,✓ 可跑
+123,NAT,Nat1To1RangeIpTest,To verify DUT allows to configure 1-to-1 NAT with Range of original dst-ip & Range of translated dst-ip,Pass,✓ 可跑
+124,NAT,Nat1To1DisplayTest,To verify the show command for specific NAT entry in config mode,Pass,✓ 可跑
+125,NAT,Nat1To1ResetTest,To verify that no ip nat resets all and specific nat entry,Pass,✓ 可跑
+126,NAT,NatGlobalEnableTest,To verify the global configuration of NAT for enable/disable,Pass,✓ 可跑
+127,NAT,NatNTo1EnableTest,To verify the NAT table configuration of N-1 NAT entry for enable/disable,Pass,✓ 可跑
+128,NAT,NatNTo1NameDescriptionTest,To verify that NAT entries are configured with Name and description N-to-1 mode,Pass,✓ 可跑
+129,NAT,NatNTo1SettingFailTest,To verify the configuration of priority of new entry as 32 fails,Pass,✓ 可跑
+130,NAT,NatNTo1ResetTest,To verify the reset of specific entry in NAT table in N-to-1 mode,Pass,✓ 可跑
+131,NAT,NatNTo1TranslateTest,To verify the N-1 NAT translation of source IP on LAN to WAN,Fail,✓ 可跑
+132,NAT,NatPatSettingTest,To verify default configuration of Port Forwarding,Fail,✓ 可跑
+133,NAT,NatPatEnableTest,To verify the configuration of new NAT entry is of mode PAT and enabled,Pass,✓ 可跑
+134,NAT,NatPatSettingFailTest,To verify that DUT throws error message for pat NAT settings configured without parameters,Pass,✓ 可跑
+135,NAT,NatPatNameDescriptionTest,To verify that NAT entries are configured with Name and description Port forwarding mode,Pass,✓ 可跑
+136,NAT,NatPatTranslateTest,To verify the configuration of PAT entry with Protocol as tcp-udp and WAN Port having unique values,Pass,✓ 可跑
+137,NAT,NatPatResetTest,To verify the deletion of all PAT entries,Pass,✓ 可跑
+138,NAT,NatChangeModeTest,To verify the modification of existing NAT entry from 1-to-1 to PAT,Pass,✓ 可跑
+139,NAT,NatPatMultiTest,To verify the creation of multiple PAT entries with protocol as tcp-udp tcp or udp,Pass,✓ 可跑
+140,NAT,NatPatStaticRouteTest,To verify the Port Forwarding along with static routes,Pass,✓ 可跑
+141,NAT,NatThroughputTest,To verify the udp throughput is 200Mbps upon when enable each NAT mode,Pass,✓ 可跑
+142,NAT,NatReloadExportImportTest,To verify that DUT can update NAT configuration settings after reload export/import and start up,Pass,✓ 可跑
+143,RssiReport,RssiReportEnable,To verify enable Rssi Report can work,Pass,✓ 可跑
+144,RssiReport,RssiReportInterval,To verify Rssi report interval range,Fail,✓ 可跑
+145,EventLog,ClearEventLogTest,To verify clear event log message,Fail,✓ 可跑
+146,EventLog,ClientLeftJoinTest,To verify Client left and Client join event log message,Pass,✓ 可跑
+147,EventLog,ColdStartTest,To verify after cold start event log message,Pass,✓ 可跑
+148,EventLog,ConfigChange5MailReceipterTest,To verify 5 receipter can receive mail message,Pass,✓ 可跑
+149,EventLog,ConfigChangeMailSslTlsTest,To verify mail server setting ssl tls,Pass,✓ 可跑
+150,EventLog,ConfigChangeMailTlsTest,To verify mail server setting tls,Pass,✓ 可跑
+151,EventLog,ConfigChangeTest,To verify ConfigChange event log message,Fail,✓ 可跑
+152,EventLog,ExportEventLogBySftp,To verify Export Event Log By Sftp,Pass,✓ 可跑
+153,EventLog,ExportEventLogByTftp,To verify Export Event Log By Tftp,Pass,✓ 可跑
+154,EventLog,ExportEventLogFail,To verify Export Event Log Fail log message,Pass,✓ 可跑
+155,EventLog,ExportImportTest,To verify Export and Import log message,Fail,✓ 可跑
+156,EventLog,FirmupgradeFailTest,To verify FirmupgradeFail log message,Pass,✓ 可跑
+157,EventLog,FirmuploadFailTest,To verify FirmuploadFail log message,Pass,✓ 可跑
+158,EventLog,IpConflictTest,To verify IpConflict log message,Pass,✓ 可跑
+159,EventLog,LoginFailTest,To verify LoginFail log message,Pass,✓ 可跑
+160,EventLog,LoginLogoutTest,To verify LoginLogout log message,Pass,✓ 可跑
+161,EventLog,MultiVapLogTest,To verify MultiVapLog delete log message,Pass,✓ 可跑
+162,EventLog,ResetDefaultTest,To verify ResetDefault log message,Pass,✓ 可跑
+163,EventLog,ExceededThresholdTest,To verify ExceededThreshold log message,Pass,✓ 可跑
+164,EventLog,OverwriteTest,To verify Overwrite behavior,Pass,✓ 可跑
+165,EventLog,StopRecordingTest,To verify StopRecording behavior,Pass,✓ 可跑
+166,EventLog,UnauthorizedAction,To verify UnauthorizedAction log message,Fail,✓ 可跑
+167,EventLog,UnrecognizedUserTest,To verify UnrecognizedUser log message,Pass,✓ 可跑
+168,EventLog,WarmStartTest,To verify WarmStart log message,Pass,✓ 可跑
+169,EventLog,RevertedTest,To verify Reverted log message,Pass,✓ 可跑
+170,DiagnosticSupport,DiagSupport.py,To test DiagSupport is work,Pass,✓ 可跑
+171,DiagnosticSupport,DiagSupportIntervalTest.py,To test DataCollection interval is range from 1 to 180,Pass,✓ 可跑
+172,Account,AccountMaxEntriesTest,To verify max account entry,Pass,✓ 可跑
+173,Account,PrivilageGroup_AdvanceDiagnostic,To verify Role custom and Authority AdvanceDiagnostic,Pass,✓ 可跑
+174,Account,PrivilageGroup_Auditor,To verify Role custom and Authority Auditor,Pass,✓ 可跑
+175,Account,PrivilageGroup_DiagnosticTest,To verify Role custom and Authority DiagnosticTest,Pass,✓ 可跑
+176,Account,PrivilageGroup_Network,To verify Role custom and Authority Network,Pass,✓ 可跑
+177,Account,PrivilageGroup_StatusMonitorTest,To verify Role custom and Authority StatusMonitorTest,Pass,✓ 可跑
+178,Account,PrivilageGroup_SystemBackup,To verify Role custom and Authority SystemBackup,Pass,✓ 可跑
+179,Account,PrivilageGroup_SystemManagementTest,To verify Role custom and Authority SystemManagementTest,Fail,✓ 可跑
+180,BasicFunction,UserAccountPrivilegeTest_admin,To verify Role admin,Pass,✓ 可跑
+181,BasicFunction,UserAccountPrivilegeTest_custom,To verify Role custom,Pass,✓ 可跑
+182,BasicFunction,UserAccountPrivilegeTest_engineer,To verify Role engineer,Pass,✓ 可跑
+183,BasicFunction,UserAccountPrivilegeTest_user,To verify Role user,Pass,✓ 可跑
+184,PasswordPolicy,PasswordComplexityStrengthCheck,To verify password rule symbol,Pass,✓ 可跑
+185,PasswordPolicy,PasswordLengthTest,To verify password length,Pass,✓ 可跑
+186,PasswordPolicy,PasswordLifeTimeTest,To verify password life time interval,Pass,✓ 可跑
+187,PasswordPolicy,PasswordValidationRulesTest,To verify password rule lower upper numbers,Pass,✓ 可跑
+188,LoginPolicy,LoginFailMessageLengthTest,To verify login fail message length,Pass,✓ 可跑
+189,LoginPolicy,LoginLockoutDisableTest,To verify lockout disable behavior,Pass,✓ 可跑
+190,LoginPolicy,LoginLockoutThreshouldTest,To verify lockout time and attemp Threshould,Pass,✓ 可跑
+191,LoginPolicy,LoginMessageLengthTest,To verify login success message length,Pass,✓ 可跑
+192,StaticRoute,StaticRouteBehaviorTest,To verify the IP traffic communication is sucessful based on the static entry created,Pass,✓ 可跑
+193,StaticRoute,StaticRouteBehaviorWithNatTest,To verify the IP traffic communication is sucessful based on the static entry created with global Nat enabled,Pass,✓ 可跑
+194,StaticRoute,StaticRouteDefaultStatusTest,To verify the default configuration of Static Route in CLI,Pass,✓ 可跑
+195,StaticRoute,StaticRouteDeleteTest,To verify the deletion static route entries,Pass,✓ 可跑
+196,StaticRoute,StaticRouteDisconnectApTest,To verify the configuration of Static Route in CLI without connection to AP,Pass,✓ 可跑
+197,StaticRoute,StaticRouteEnableTest,To verify enable/disable of the newly created static route index 1,Fail,✓ 可跑
+198,StaticRoute,StaticRouteErrorMsgTest,To verify the occurrence of the error,Pass,✓ 可跑
+199,StaticRoute,StaticRouteMaxEntriesTest,To verify the functionality of static routing with maximum static route entries 32,Pass,✓ 可跑
+200,StaticRoute,StaticRouteMetricLimitTest,To verify the configuration of static route is successfull for metric values having lower/upper limit in the range,Pass,✓ 可跑
+201,StaticRoute,StaticRouteNameTest,To verify configuring the name for static route entry,Pass,✓ 可跑
+202,StaticRoute,StaticRouteRemoveReentryTest,To verify the functionality of static routing after removal and re-entry of the static route entries,Pass,✓ 可跑
+203,StaticRoute,StaticRouteSettingTest,To verify that 32 static route entries are editable,Pass,✓ 可跑
